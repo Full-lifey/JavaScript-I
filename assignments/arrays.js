@@ -74,16 +74,16 @@ console.log(`The last car is a ${lastCar.car_make} ${lastCar.car_model}`);
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
 let carModels = [];
 for (let i=0; i<inventory.length; i++){
-    carModels.push(inventory[i].car_model)
+    carModels.push(inventory[i].car_model);
 }
-carModels.sort()
+carModels.sort();
 console.log(carModels);
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
 let carYears = [];
 for (let i=0; i<inventory.length; i++){
-    carYears.push(inventory[i].car_year)
+    carYears.push(inventory[i].car_year);
 }
 console.log(carYears);
 
@@ -92,7 +92,7 @@ console.log(carYears);
 let oldCars = [];
 for (let i=0; i<inventory.length; i++){
     if (carYears[i] < 2000){
-        oldCars.push(carYears[i])
+        oldCars.push(carYears[i]);
     }
 }
 console.log(oldCars.length); 
@@ -102,7 +102,7 @@ console.log(oldCars.length);
 let BMWAndAudi = [];
 for (let i=0; i<inventory.length; i++){
     if (inventory[i].car_make === 'BMW' || inventory[i].car_make === 'Audi'){
-        BMWAndAudi.push(inventory[i])
+        BMWAndAudi.push(inventory[i]);
     }
 }
 console.log(BMWAndAudi.length);

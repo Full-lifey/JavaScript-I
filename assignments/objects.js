@@ -58,21 +58,21 @@ const antonietta = {
 // Once your objects are created, log out the following requests from HR into the console:
 
 // Mitzi's name
-console.log(mitzi.name)
+console.log('Mitzi', mitzi.name)
 // Kennan's ID
-console.log(kennan.id)
+console.log('Kennan', kennan.id)
 // Keven's email
-console.log(keven.email)
+console.log('Keven', keven.email)
 // Gannie's name
-console.log(gannie.name)
+console.log('Gannie', gannie.name)
 // Antonietta's Gender
-console.log(antonietta.gender)
+console.log('Antonietta', antonietta.gender)
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 // console.log(kennan.speak());
-console.log(kennan.speak())
+console.log('Kennan Speaks', kennan.speak())
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-console.log(antonietta.multiplyNums(3,4));
+console.log('Antonietta maths', antonietta.multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
 
@@ -83,16 +83,37 @@ console.log(antonietta.multiplyNums(3,4));
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
-const parent = {}
+const parent = {
+  name: 'Susan',
+  age: 70,
+  speak() {
+    console.log('Hello my name is ' + this.name)
+  },
+  child: {
+    name: 'George',
+    age: 50,
+    speak() {
+      console.log('Hello my name is ' + this.name)
+    },
+    grandchild: {
+      name: 'Sam',
+      age: 30,
+      speak() {
+        console.log('Hello my name is ' + this.name)
+      }
+    }
+  }
+}
 
 // Log the parent object's name
-
+console.log('Susan Speaks', parent.speak())
 // Log the child's age
-
+console.log('George age', parent.child.age)
 // Log the name and age of the grandchild
-
+console.log('grandchild', parent.child.grandchild.name + ' ' + parent.child.grandchild.age)
 // Have the parent speak
-
+parent.speak()
 // Have the child speak
-
+parent.child.speak()
 // Have the grandchild speak
+parent.child.grandchild.speak()
